@@ -304,11 +304,19 @@ input, textarea {
 /* Mobile */
 @media (max-width: 768px) {
   .footer {
-    min-height: 100vh;              /* full screen footer on mobile */
-    padding: 50px 15px;
+    min-height: auto;              /* full screen footer on mobile */
+    padding: 40px 15px;
     background-position: center top;
+    background-size: auto;      /* show full image */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .footer-overlay {
+    background: rgba(0,0,0,0.55);  /* readability */
+    padding: 80px 20px;
   }
 }
+
 
 .call-btn, .whatsapp-btn {
   position: fixed;
@@ -547,7 +555,7 @@ input, textarea {
   font-size: 16px;
   max-width: 750px;
   margin: 0 auto 50px;
-  color: #777;
+  color: var(--black);
 }
 
 .menu-grid {
@@ -574,7 +582,7 @@ input, textarea {
 .menu-column li {
   font-size: 14px;
   line-height: 1.9;
-  color: #333;
+  color: var(--black);
 }
 
 /* MOBILE */
@@ -700,21 +708,6 @@ input, textarea {
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.8rem;
-  }
-}
-
-/* ===== FOOTER MOBILE IMAGE FIX ===== */
-@media (max-width: 768px) {
-
-  .footer {
-    background-size: auto;      /* show full image */
-    background-position: center;
-    background-repeat: no-repeat;    
-  }
-
-  .footer-overlay {
-    background: rgba(0,0,0,0.55);  /* readability */
-    padding: 80px 20px;
   }
 }
 
